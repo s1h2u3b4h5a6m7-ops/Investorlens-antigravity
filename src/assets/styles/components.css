@@ -1,0 +1,320 @@
+/* ==========================================================================
+   InvestorLens India — UI-2 Native Component Styles
+   Target File: src/assets/styles/components.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Floating Navigation Bezel (.st-bezel)
+   -------------------------------------------------------------------------- */
+.st-bezel {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: calc(100% - 2rem);
+  max-width: 1080px;
+  padding: 0.35rem 0.75rem 0.35rem 1rem;
+  background: rgba(15, 18, 25, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-capsule);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(84, 207, 218, 0.08);
+  transition: all var(--transition-normal);
+}
+
+/* Brand Identity Button */
+.st-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-sora);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: opacity var(--transition-fast);
+}
+
+.st-brand:hover {
+  opacity: 0.85;
+}
+
+.st-brand-mark {
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.st-brand-accent {
+  color: var(--accent);
+}
+
+/* Tab Row */
+.st-tabrow {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(9, 12, 18, 0.5);
+  padding: 0.2rem;
+  border-radius: var(--radius-capsule);
+  border: 1px solid rgba(31, 35, 50, 0.5);
+}
+
+/* Individual Tab Button */
+.st-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-capsule);
+  color: var(--text-2);
+  font-family: var(--font-inter);
+  font-size: 0.825rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.st-tab:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.st-tab.is-active,
+.st-tab.active {
+  color: var(--accent);
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(84, 207, 218, 0.2);
+}
+
+.st-tab-icon {
+  display: flex;
+  align-items: center;
+}
+
+.st-tab-label-short {
+  display: none;
+}
+
+/* Status Pill Badge */
+.st-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-capsule);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.st-status-pill.is-pass {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.st-status-pill.is-fail {
+  background: rgba(236, 122, 110, 0.15);
+  border-color: var(--down);
+  color: var(--down);
+}
+
+.st-status-pill.is-loading {
+  background: rgba(166, 171, 184, 0.1);
+  border-color: var(--text-3);
+  color: var(--text-2);
+}
+
+/* --------------------------------------------------------------------------
+   2. Aperture Hero & Omnibox (.st-hero-banner, .st-q)
+   -------------------------------------------------------------------------- */
+.st-hero-banner {
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.st-q {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.8rem;
+  background-color: var(--void);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-capsule);
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.st-q:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-dim);
+}
+
+.st-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.st-readout {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--void);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   3. View Container Shells (.view-shell)
+   -------------------------------------------------------------------------- */
+.view-shell {
+  animation: fadeIn 200ms ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+   4. Sector Ledger & Proportional Rails (.sec-rail)
+   -------------------------------------------------------------------------- */
+.sec-rail {
+  width: 100%;
+  height: 6px;
+  background-color: var(--void);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.sec-rail-bar {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 3px;
+  transition: width 300ms ease;
+}
+
+/* --------------------------------------------------------------------------
+   5. Macro Forces Explorer (.frc-index, .frc-shelf)
+   -------------------------------------------------------------------------- */
+.frc-shelf {
+  background-color: var(--panel);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.frc-shelf-tailwind {
+  border: 1px solid rgba(86, 200, 150, 0.3);
+}
+
+.frc-shelf-context {
+  border: 1px solid rgba(139, 146, 169, 0.3);
+}
+
+.frc-shelf-headwind {
+  border: 1px solid rgba(236, 122, 110, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   6. Peer Group Compare Matrix (.peer-matrix)
+   -------------------------------------------------------------------------- */
+.peer-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.peer-matrix th {
+  padding: 0.75rem 1rem;
+  background-color: var(--panel-2);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+  font-family: var(--font-mono);
+}
+
+.peer-matrix td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.peer-matrix .best-value {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   7. Freshness Monitor & Headline River (.freshness-ledger, .headline-river)
+   -------------------------------------------------------------------------- */
+.freshness-ledger {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.is-stale {
+  background-color: var(--stale-dim);
+  color: var(--stale);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   8. Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .st-tab-label-full {
+    display: none;
+  }
+  .st-tab-label-short {
+    display: inline;
+  }
+}
+
+@media (max-width: 640px) {
+  .st-bezel {
+    top: 0.5rem;
+    width: calc(100% - 1rem);
+    padding: 0.3rem 0.5rem;
+  }
+  .st-brand-name {
+    display: none;
+  }
+  .st-status-pill .st-status-text {
+    display: none;
+  }
+}

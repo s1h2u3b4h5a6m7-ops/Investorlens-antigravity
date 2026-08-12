@@ -1,0 +1,137 @@
+/* ==========================================================================
+   InvestorLens India — Precision Instrument Dark Theme Tokens & Styles
+   Target File: src/assets/styles/theme.css
+   ========================================================================== */
+
+/* Typography Import (Sora, Inter, JetBrains Mono) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@400;600;700&display=swap');
+
+/* Font Declarations */
+@font-face {
+  font-family: 'Sora';
+  font-style: normal;
+  font-display: swap;
+  src: local('Sora'), url('https://fonts.gstatic.com/s/sora/v12/xMQbuFFYT72XzWDUSAI.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-display: swap;
+  src: local('JetBrains Mono'), url('https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_26392Q.woff2') format('woff2');
+}
+
+:root {
+  /* Surface & Container Colors */
+  --void: #090C12;
+  --panel: #0F1219;
+  --panel-2: #12161F;
+  --border: #1F2332;
+
+  /* Primary Accent & Text */
+  --accent: #54CFDA;
+  --accent-dim: rgba(84, 207, 218, 0.12);
+  --text: #F0F2F5;
+  --text-2: #A6ABB8;
+  --text-3: #6B7280;
+
+  /* Status & Semantic Indicators */
+  --up: #56C896;
+  --down: #EC7A6E;
+  --neutral: #8B92A9;
+  --stale: #F5B544;
+  --stale-dim: rgba(245, 181, 68, 0.12);
+  --chain: #A78BFA;
+  --chain-dim: rgba(167, 139, 250, 0.12);
+
+  /* Typography Families */
+  --font-sora: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, 'Courier New', monospace;
+
+  /* Typography Fluid Scale */
+  --t-hero: clamp(34px, 6.2vw, 62px);
+  --t-h1: clamp(27px, 5vw, 44px);
+  --t-h2: clamp(20px, 2.7vw, 26px);
+  --t-h3: 16px;
+  --t-body: clamp(14px, 1.6vw, 16px);
+  --t-small: 13px;
+  --t-cap: 11px;
+  --t-chapter: clamp(52px, 12vw, 120px);
+
+  /* Spacing System */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 72px;
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-capsule: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset & Base Elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--void);
+  color: var(--text);
+  font-family: var(--font-inter);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sora);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+code, kbd, samp, pre, .mono-val, .ticker, .metric-num {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbar for Precision Instrument UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-3);
+}
