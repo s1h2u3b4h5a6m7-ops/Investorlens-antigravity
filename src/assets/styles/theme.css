@@ -6,27 +6,6 @@
 /* Typography Import (Sora, Inter, JetBrains Mono) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@400;600;700&display=swap');
 
-/* Font Declarations */
-@font-face {
-  font-family: 'Sora';
-  font-style: normal;
-  font-display: swap;
-  src: local('Sora'), url('https://fonts.gstatic.com/s/sora/v12/xMQbuFFYT72XzWDUSAI.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-display: swap;
-  src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-display: swap;
-  src: local('JetBrains Mono'), url('https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_26392Q.woff2') format('woff2');
-}
 
 :root {
   /* Surface & Container Colors */
